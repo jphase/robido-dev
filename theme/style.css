@@ -1,0 +1,566 @@
+/*
+	Theme Name: Robido New
+	Theme URI: http://dev.robido.com	
+	Description: Robido Theme
+	Version: 1.0
+	Author: Lauren Brassaw
+	Author URI: http://www.laurenbrassaw.com
+	Template: blank
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700);
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	font-size:62.5%;
+}
+body {
+	font:300 15px/1.4 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#999;
+}
+h3 {
+	font-weight: 400;
+	font-size: 3rem;
+}
+h4 {
+	font-size: 2rem;
+}
+p {
+	font-size: 1.7rem;
+}
+
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:#444;
+	text-decoration:none;
+}
+a:hover {
+	color:#444;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+/* columns */
+.one_half {
+	width:48%;
+}
+.one_third {
+	width:30.66%;
+}
+.two_third {
+	width:65.33%;
+}
+.one_fourth {
+	width:22%;
+}
+.three_fourth {
+	width:74%;
+}
+.one_fifth {
+	width:16.8%;
+}
+.two_fifth {
+	width:37.6%;
+}
+.three_fifth {
+	width:58.4%;
+}
+.four_fifth {
+	width:67.2%;
+}
+.one_sixth {
+	width:13.33%;
+}
+.five_sixth {
+	width:82.67%;
+}
+/* wrapper */
+.wrapper {
+	max-width:1280px;
+	width: 75% !important;
+	margin:0 auto;
+	position:relative;
+}
+/* header */
+.header {
+	position: fixed;
+	width: 100%;
+	background-color: #fff;
+	top: 0;
+	z-index: 1000;
+	padding: 10px 0;
+}
+/* logo */
+.logo {
+	width: 100px;
+	float: left;
+}
+.logo-img {
+	width: 100px !important;
+	height: auto;
+}
+/* nav */
+.nav {
+	float: right;
+}
+.nav a:hover, .nav a.active {
+	color: #ed7c04;
+}
+.nav ul li {
+	list-style: none;
+	float: left;
+	padding-right: 60px;
+	padding-top: 25px;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.nav ul li:last-child {
+	padding-right: 0;
+}
+/* sidebar */
+.sidebar {
+
+}
+/* footer */
+.footer {
+
+}
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+.top h2,
+.about h2,
+.work h2,
+.services h2,
+.articles h2,
+.contact h2 {
+	visibility: hidden;
+}
+.top {
+	margin-top: 8%;
+	width: 100%;
+	overflow: hidden;
+	padding: 0 12.5% 5% 12.5%;
+	background: url('/wp-content/uploads/2016/06/stock-photo-group-of-business-people-on-informal-meeting-at-natural-wood-cafe-desk-using-variety-of-electronic-295153469.jpg') no-repeat;
+	background-size: cover;
+}
+.top h1 {
+	font-weight: 600;
+	font-size: 4rem;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: right;
+	margin-top: 19rem;
+	padding: 0 20rem;
+}
+.top h3 {
+	font-size: 2.5rem;
+	font-weight: 400;
+	color: #fff;
+	padding: 0 20rem;
+}
+a.home-btn {
+	display: inline-block;
+	float: right;
+	color: #fff;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0.2);
+	border: 3px solid #fff;
+	padding: 1em 1.5em;
+	margin: 20px 0 0 20px;
+}
+a.home-btn:hover {
+	color: #ed7c04;
+	background-color: #fff;
+	transition: 1s ease;
+}
+.our-work {
+	display: inline-block;
+	float: left;
+	margin-right: 15px;
+}
+a.company-btn {
+	display: inline-block;
+	float: left;
+	color: #000;
+	background-color: #fbf8f1;
+	padding: 5em 6.5em;
+	margin: 0 0 0 53px;
+}
+a.company-btn:last-child {
+	margin-right: 0;
+}
+.about {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background-color: #006bb2;
+	overflow: hidden;
+	padding: 0 12.5% 5% 12.5%;
+}
+.about:after {
+	content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.35;
+    background-image: url('http://robido.laurenbrassaw.com/wp-content/uploads/2016/06/logo-white.svg');
+    background-repeat: no-repeat;
+    background-position: 84% 50%;
+    -ms-background-size: 40%;
+    -o-background-size: 40%;
+    -moz-background-size: 40%;
+    -webkit-background-size: 40%;
+    background-size: 40%;
+}
+.about h3,
+.work h3,
+.contact h3 {
+	color: #fff;
+}
+.about p {
+	color: #fff;
+	width: 58.4%;
+}
+.services {
+	width: 100%;
+	overflow: hidden;
+	background-color: #fbf8f1;
+	padding: 0 12.5% 7% 12.5%;
+}
+.services-div {
+	display: inline-block;
+	float: left;
+	border: 5px solid #ed7c04;
+	padding: 1.5em 2em 0.5em;
+	margin: 25px 40px 0 0;
+}
+.services-div:last-child {
+	margin-right: 0;
+}
+.services-div h4,
+.services-div p {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.services-div img {
+	height: 100px;
+	width: 100px;
+	display: block;
+	margin: auto;
+}
+.work {
+	overflow: hidden;
+	width: 100%;
+	background-color: #006bb2;
+	padding: 0 12.5% 8% 12.5%;
+}
+.work p {
+	color: #fff;
+}
+.articles {
+	overflow: hidden;
+	width: 100%;
+	background-color: #fbf8f1;
+	padding: 0 12.5% 5% 12.5%;
+}
+.articles {
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+}
+.articles:before {
+	content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+    background-image: url('/wp-content/uploads/2016/06/bracket-left.svg'), url('/wp-content/uploads/2016/06/bracket-right.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 10% 67%, 90% 67%;
+    -ms-background-size: 12%;
+    -o-background-size: 12%;
+    -moz-background-size: 12%;
+    -webkit-background-size: 12%;
+    background-size: 12%;
+}
+
+#advps_container1 .advs-title, #advps_container1 .advs-title a  {
+	font-weight: 400 !important;
+	font-size: 3rem !important;
+	font-family: 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	text-transform: uppercase !important;
+	color: #006bb2 !important;
+}
+.advps-excerpt-block-one {
+	font-weight: 400 !important;
+	font-size: 1.7rem !important;
+	font-family: 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	margin-top: 12%;
+}
+a.more-link {
+	display: block;
+	color: #006bb2;
+}
+.contact {
+	overflow: hidden;
+	background-color: #006bb2;
+	padding: 0 12.5% 5% 12.5%;
+}
+.contact-div {
+	float: left;
+	display: inline-block;
+}
+.footer {
+	background-color: #363636;
+	padding: 20px 12.5%;
+}
+.footer p {
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.5rem;
+}
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
