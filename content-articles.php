@@ -10,7 +10,14 @@
 
 		<h2><?php the_title(); ?></h2>
 
-		<?php the_content(); ?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			 
+					<!-- To see additional archive styles, visit the /parts directory -->
+					<?php get_template_part( 'parts/loop', 'archive' ); ?>
+				    
+				<?php endwhile; ?>	
+						
+				<?php endif; ?>
 		
 	</div>
 

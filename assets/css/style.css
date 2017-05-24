@@ -3904,7 +3904,7 @@ GENERAL STYLES
 *********************/
 @font-face {
   font-family: "Work Sans";
-  src: url("https://fonts.googleapis.com/css?family=Work+Sans:400,600,700"); }
+  src: url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,600"); }
 
 /*********************
 LINK STYLES
@@ -3918,7 +3918,15 @@ H1, H2, H3, H4, H5 P STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: "Work Sans", Helvetica, Arial, sans-serif; }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+    font-family: 'Work Sans', Helvetica, Arial, sans-serif;
     text-decoration: none; }
+  h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover, h5 a:hover, .h5 a:hover {
+    text-decoration: none; }
+
+p {
+  font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300; }
 
 /*********************
 HEADER STYLES
@@ -3929,20 +3937,26 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-.top-bar {
+.header {
   width: 100%;
   overflow: hidden;
   top: 0;
   left: 0;
   position: fixed;
-  background-color: #fff; }
-  .top-bar .title-area {
+  background-color: #fff;
+  z-index: 1000; }
+  .header .title-area {
     z-index: 1; }
-  .top-bar ul {
+  .header ul {
     background-color: #fff; }
 
-#top-bar-wrapper {
-  padding: 0.6% 8%; }
+body.admin-bar .header {
+  top: 32px; }
+
+.top-bar {
+  background-color: #fff;
+  max-width: 75rem;
+  margin: 0 auto; }
 
 .top-bar-left li a {
   text-indent: -9000px;
@@ -3968,9 +3982,6 @@ NAVIGATION STYLES
   background-color: transparent;
   color: orange; }
 
-body.admin-bar .top-bar {
-  top: 32px; }
-
 .off-canvas-list ul {
   margin-left: 0; }
   .off-canvas-list ul li a {
@@ -3978,11 +3989,44 @@ body.admin-bar .top-bar {
   .off-canvas-list ul .dropdown {
     margin-left: 20px; }
 
+.btn {
+  display: inline-block;
+  background: transparent;
+  border: 3px solid #000;
+  padding: 10px 20px;
+  margin: 1rem;
+  color: #000;
+  font-weight: 600; }
+
+.btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  transition: 1s ease;
+  -webkit-transition: 1s ease; }
+
+[type='submit'],
+[type='button'] {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0);
+  border: 3px solid #fff;
+  padding: 10px 20px;
+  margin: 1rem 0;
+  color: #fff;
+  font-weight: 600; }
+
+[type='submit']:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #006bb2;
+  transition: 1s ease;
+  -webkit-transition: 1s ease; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-#content #inner-content {
-  padding: 1rem 0rem; }
+#content {
+  background-color: #eaeaea; }
+  #content #inner-content {
+    padding: 1rem 0rem; }
 
 .page-title .vcard {
   border: 0px;
@@ -3993,61 +4037,118 @@ POSTS & CONTENT STYLES
 
 #welcome {
   overflow: hidden;
-  background: url("/wp-content/uploads/2017/05/business-desk.jpg") 50% 0 no-repeat/cover;
-  margin-top: 80px; }
+  background: url("/wp-content/uploads/2017/05/business-desk.jpg") 50% 0 no-repeat, rgba(255, 255, 255, 0.8);
+  background-size: cover;
+  background-blend-mode: soft-light;
+  margin-top: 72px;
+  padding: 7rem 3rem 5rem;
+  text-align: center; }
+  #welcome h2 {
+    font-size: 2.5rem;
+    font-weight: 600; }
 
 #about {
   background-color: #006bb2;
-  color: #fff; }
+  color: #fff;
+  padding: 5rem 3rem; }
 
 #services {
   background-color: #fbf8f1;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 5rem 3rem; }
 
 .services-div {
-  display: block;
+  display: inline-block;
   margin: 25px 14px;
-  text-align: center; }
-  .services-div h4 {
-    padding-top: 5px;
-    padding-bottom: 3px; }
+  text-align: center;
+  width: 100%;
+  height: 300px h4;
+    height-padding-top: 5px;
+    height-padding-bottom: 3px; }
   .services-div img {
     height: 80px;
     width: 80px; }
 
-.one_third {
-  float: left;
-  width: 25%;
-  margin: 3% 4%; }
-
-.two_thirds {
-  float: left;
-  width: 40vw;
-  margin: 6% 8%; }
-
 #our-work {
   background-color: #006bb2;
-  overflow: hidden;
-  color: #fff; }
+  color: #fff;
+  padding: 5rem 3rem; }
+
+#work-list ul,
+#service-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+  align-content: space-between; }
+  #work-list ul li,
+  #service-list li {
+    list-style-type: none;
+    background-color: #fbf8f1;
+    padding: 50px;
+    margin: 2rem 1rem 0;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    overflow: hidden; }
+
+#service-img-1 {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: url("/wp-content/themes/robido/theme/welder.svg") 0 0 no-repeat;
+  background-size: 100px 100px; }
+
+#service-img-1:hover {
+  background: url("/wp-content/themes/robido/theme/astronaut.svg") 0 0 no-repeat;
+  transition: 1s ease; }
+
+#service-img-2 {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: url("/wp-content/themes/robido/theme/motorcyclist.svg") 0 0 no-repeat;
+  background-size: 100px 100px; }
+
+#service-img-2:hover {
+  background: url("/wp-content/themes/robido/theme/welder.svg") 0 0 no-repeat;
+  transition: 1s ease; }
+
+#service-img-3 {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: url("/wp-content/themes/robido/theme/astronaut.svg") 0 0 no-repeat;
+  background-size: 100px 100px; }
+
+#service-img-3:hover {
+  background: url("/wp-content/themes/robido/theme/welder.svg") 0 0 no-repeat;
+  transition: 1s ease; }
+
+#work-list ul {
+  margin: 0; }
 
 .company-btn {
-  overflow: hidden;
   background-color: #fbf8f1;
   padding: 50px;
-  margin-right: 15px; }
+  margin: 2rem 1rem 0;
+  width: 100%;
+  height: 200px; }
 
 #articles {
   background-color: #fbf8f1;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 5rem 3rem; }
 
 #contact {
   background-color: #006bb2;
   overflow: hidden;
-  color: #fff; }
+  color: #fff;
+  padding: 5rem 3rem; }
 
 #footer {
   background-color: #363636;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 1rem 3rem; }
 
 #map {
   background-color: #363636;
